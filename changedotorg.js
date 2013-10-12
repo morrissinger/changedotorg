@@ -34,7 +34,7 @@
 			});				
 	}
 
-	function signPetition(petitionId, values, oAuth, callback) {
+	function signPetition(target, petitionId, values, oAuth, callback) {
 
 		values.api_key = oAuth.apiKey;
 		values.petition_authorization_key = oAuth.petitionAuthorizationKey;
@@ -42,7 +42,7 @@
 
 		$.ajax({
 			type: "POST",
-			url: 'submit.php',
+			url:  target,
 			data: values,
 			success: function( returnData ) {
 				callback(returnData);
@@ -72,7 +72,7 @@
 
 			// Get the petition ID
 			getPetitionId(oAuth, function(petitionId) {
-				signPetition(petitionId, formValues, oAuth, function(res) {
+				signPetition($(form).attr('action', petitionId, formValues, oAuth, function(res) {
 					jsonResponse = JSON.parse(res)
 					$(form).find('input[type=submit]').val(originalSubmitVal);
 					$(form).off('submit.changedotorgSubmitted').on('submit.changedotorg', changedotorgSubmit);
