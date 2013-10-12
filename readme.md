@@ -1,6 +1,9 @@
 Integrate a form with Change.org
 ================================
 
+This is a jQuery plugin to allow you to integrate a form with Change.org, so
+people can sign petitions on your own website.
+
 If you want to have people sign a Change.org petition right on your own website,
 it might be helpful to use JavaScript to process the form results. This jQuery
 plugin allows you to do that.
