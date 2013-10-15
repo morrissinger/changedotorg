@@ -72,7 +72,7 @@
 
 			// Get the petition ID
 			getPetitionId(oAuth, function(petitionId) {
-				signPetition($(form).attr('action', petitionId, formValues, oAuth, function(res) {
+				signPetition($(form).attr('action'), petitionId, formValues, oAuth, function(res) {
 					jsonResponse = JSON.parse(res)
 					$(form).find('input[type=submit]').val(originalSubmitVal);
 					$(form).off('submit.changedotorgSubmitted').on('submit.changedotorg', changedotorgSubmit);
@@ -81,11 +81,11 @@
 					if (jQuery.isFunction(cb)) {
 						cb(jsonResponse);
 					} else {
-					if (jsonResponse.result == 'failure') {
-						alert('Unable to sign petition. Please try again.');
-					} else {
-						alert('You have successfully signed this petition.');
-					}
+						if (jsonResponse.result == 'failure') {
+							alert('Unable to sign petition. Please try again.');
+						} else {
+							alert('You have successfully signed this petition.');
+						}
 					}
 
 				});
