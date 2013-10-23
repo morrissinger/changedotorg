@@ -6,7 +6,7 @@
 
 // Set my API key and secret token.
   $api_key = htmlspecialchars($_POST['api_key'], ENT_QUOTES, 'UTF-8');;
-  $secret = 'API SECRET GOES HERE';
+  $secret = '2e56ea46ed1fe37eef920fc1cbab9b452014335b8f90308e9e07994ce8fc1c76';
 
   // Set my authorization key for petition with Change.org ID 12345.
   $petition_auth_key = htmlspecialchars($_POST['petition_authorization_key'], ENT_QUOTES, 'UTF-8');

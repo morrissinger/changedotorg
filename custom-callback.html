@@ -23,18 +23,19 @@
 				padding: 10px;
 			}
 		</style>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	</head>
 	<body>
 
 <!-- REMEMBER TO SET THE DATA ATTRIBUTES ON THE FORM ELEMENT -->
 		<form 	id="changeOrgForm" 
 				action="submit.php" 		
-				data-toggle="changedotorgCustom" 
-				data-changedotorg-petitionurl="PETITION URL GOES HERE" 
-				data-changedotorg-petitionkey = 'PETITION AUTHORIZATION KEY GOES HERE' 
-				data-changedotorg-apikey = 'PETITION API KEY GOES HERE'
-				data-changedotorg-source = 'PETITION SOURCE GOES HERE'>
+				data-toggle="changedotorgCustom"
+				data-changedotorg-petitionurl="https://www.change.org/petitions/mta-negotiate-a-fair-contract-with-nyc-transit-workers"
+				data-changedotorg-petitionkey="d130f148311cce31425ecb03b3961d447c081e4a436c2ab4c621534c1d307396"
+				data-changedotorg-apikey="41aadc90ac1b54741c4f67162bb627ca30f1e1f2f1db2c0fa9adbde4f2031630"
+				data-changedotorg-source="twulocal100.org"
+				data-changedotorg-idproxy="proxy/get_id.php">
 
 			<input type="text" placeholder="First Name" name="firstName"></input>
 			<input type="text" placeholder="Last Name" name="lastName"></input>
@@ -48,7 +49,7 @@
 		</form>
 
 		<!-- Scripts at Page Ready -->
-		<script src="../changedotorg.js"></script>
+		<script src="changedotorg.js"></script>
 		<!-- The plugin automatically uses Change.org for forms with data-toggle="changedotorg".
 		     However, for custom callbacks, you'll need to set a different toggle and catch it
 		     yourself, as is shown here: --> 		
